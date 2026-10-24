@@ -28,6 +28,15 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/partners/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
