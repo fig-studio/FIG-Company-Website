@@ -18,7 +18,7 @@ Four stand-alone pages are live but deliberately not linked from anywhere on the
 - `/events/ai-design-makeathon-sponsor-packages` (sponsor packages with prices; share only with sponsors you are negotiating with)
 - `/events/ai-design-makeathon-university` (university partnership)
 - `/events/ai-design-makeathon-partnership` (industry partnership, no pricing)
-- `/partners/fig-studio-partner-deck` (company-level partner deck, 20 slides, designed with the `frontend-design` skill in `.claude/skills/`: paper surface, Sora only, a chapter rail instead of eyebrow labels; print to PDF from the browser for an attachment. Team, program-partner price and contact slides carry `[placeholders]` until filled)
+- `/partners/fig-studio-partner-deck` (company-level partner deck, 19 slides: why FIG, who we are, proof, platform, partnering, next; designed with the `frontend-design` skill in `.claude/skills/`: paper surface, Sora only, a chapter rail instead of eyebrow labels; print to PDF from the browser for an attachment. Team, program-partner price and contact slides carry `[placeholders]` until filled)
 
 They share `events/ai-design-makeathon/` (theme, `page.css`, `page.js`, images). The prior-event figures on these pages
 are read from the recap page at load time, with static fallbacks in the markup.

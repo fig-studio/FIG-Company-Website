@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>FIG Studio — Partner Deck</title>
-<meta name="description" content="FIG Studio partner deck: who we are, what we have run, and how partners take part.">
+<meta name="description" content="FIG Studio partner deck: why FIG exists, what it has built, and how partners take part.">
 <link rel="icon" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,6 +105,10 @@
   .wm.caps { font-size: calc(32 * var(--px)); letter-spacing: .02em; }
   .tier2 { display: grid; grid-template-columns: repeat(8, 1fr); gap: calc(32 * var(--px)); align-items: center; }
   .tier2 img { height: calc(44 * var(--px)); width: 100%; object-fit: contain; object-position: left center; filter: grayscale(1) contrast(1.3) brightness(.85); mix-blend-mode: multiply; opacity: .75; }
+  .loop { display: grid; grid-template-columns: repeat(4, 1fr); gap: calc(56 * var(--px)); }
+  .step { display: flex; flex-direction: column; gap: calc(12 * var(--px)); position: relative; }
+  .return { height: calc(70 * var(--px)); margin-top: calc(-16 * var(--px)); }
+  .return svg { width: 100%; height: 100%; display: block; }
   .constellation { position: absolute; right: calc(120 * var(--px)); top: calc(120 * var(--px)); width: calc(880 * var(--px)); height: calc(840 * var(--px)); }
   .constellation svg { width: 100%; height: 100%; }
 
@@ -128,7 +132,7 @@
 <body>
 <main class="deck" id="deck">
 
-<!-- 1 Cover -->
+<!-- 1 -->
 <section class="slide cover" id="s1">
   <div class="in">
     <div class="constellation" aria-hidden="true">
@@ -150,57 +154,100 @@
     <img class="brand" src="../fig-logo-vector.svg" alt="FIG Studio">
     <div style="display:flex;flex-direction:column;gap:calc(32 * var(--px));max-width:calc(900 * var(--px))">
       <h1>Where<br>frontier AI<br>lands.</h1>
-      <p class="lead quiet" style="max-width:calc(720 * var(--px))">An introduction to FIG Studio for partners: who we are, what we have built this autumn, and how to build with us.</p>
+      <p class="lead quiet" style="max-width:calc(720 * var(--px))">An introduction to FIG Studio for partners: why we exist, what we have built, and how to build with us.</p>
     </div>
     <p class="sm quiet">Partner deck, autumn 2026</p>
   </div>
 </section>
 
-<!-- 2 Who -->
+<!-- 2 -->
 <section class="slide" id="s2">
   <div class="in">
-    <div class="rail"><p class="on">Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
-    <div class="body" style="gap:calc(56 * var(--px))">
-      <h2 class="sm" style="max-width:calc(1300 * var(--px))">FIG Studio is a Bay Area AI incubator and community bringing together designers, engineers, founders, researchers and investors to explore and build what’s next in AI.</h2>
-      <p class="lead quiet">Through hackathons, makeathons, demo days and mixers, we connect emerging talent with industry practitioners, help turn ideas into working products, and give teams a stage and a path forward.</p>
+    <div class="rail"><p class="on">Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
+    <div class="body">
+      <h2>Breakthrough research alone doesn’t change industries.</h2>
+      <p class="lead quiet">It takes market understanding, customer access, execution and the right people in the same room. FIG exists to put those together.</p>
+      <div class="g3" style="margin-top:auto;gap:calc(40 * var(--px)) calc(56 * var(--px))">
+        <div><h3>Products are being rebuilt</h3><p class="quiet">AI is changing products, workflows and interaction patterns faster than everyday practice can keep up.</p></div>
+        <div><h3>Talent needs a stage</h3><p class="quiet">Mockups and resumes don’t show how someone builds with AI. Emerging builders need a real brief, a room and a path forward.</p></div>
+        <div><h3>Expertise sits far from the models</h3><p class="quiet">The people who know an industry’s problems rarely sit next to the people building frontier AI.</p></div>
+      </div>
+    </div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>2 of 19</span></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" id="s3">
+  <div class="in">
+    <div class="rail"><p>Why FIG</p><p class="on">Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
+    <div class="body">
+      <h2>FIG Studio is a Bay Area AI incubator and community.</h2>
+      <p class="lead quiet">We bring together designers, engineers, founders, researchers and investors to explore and build what’s next in AI. Through hackathons, makeathons, demo days and mixers, we connect emerging talent with industry practitioners, help turn ideas into working products, and give teams a stage and a path forward.</p>
       <div class="g3" style="margin-top:auto">
         <div><h3 class="blue">Frontier</h3><p class="sm quiet">Breakthrough AI capabilities at the technological edge, searching for real-world impact.</p></div>
         <div><h3 class="blue">Industry</h3><p class="sm quiet">Deep expertise, trusted relationships and customer access earned inside real markets.</p></div>
         <div><h3 class="blue">Growth</h3><p class="sm quiet">The platform that combines both into enduring, compounding companies.</p></div>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>2 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>3 of 19</span></div>
   </div>
 </section>
 
-<!-- 3 Two engines -->
-<section class="slide" id="s3">
-  <div class="in">
-    <div class="rail"><p class="on">Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
-    <div class="body">
-      <h2>The community is the way in. The studio is the path forward.</h2>
-      <div class="g2" style="margin-top:calc(16 * var(--px))">
-        <div style="display:flex;flex-direction:column;gap:calc(16 * var(--px))">
-          <h3 class="blue">Community programs</h3>
-          <p>Where builders meet, build and show their work.</p>
-          <p class="quiet">Hackathons and makeathons. Demo days, panels and mixers. FIG Friday Open House, every week in San Mateo. Smaller conversations and private dinners.</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:calc(16 * var(--px))">
-          <h3 class="blue">Venture studio</h3>
-          <p>Where experienced leaders build AI-native companies.</p>
-          <p class="quiet">Ten portfolio companies led by people who know their industries from the inside. Support from venture formation to go-to-market and capital. A founder network that invests in, hires from and sells to itself.</p>
-        </div>
-      </div>
-      <p class="sm quiet" style="margin-top:auto;max-width:calc(1000 * var(--px))">For partners, the community side is what you take part in. The studio side is why standout builders and teams have somewhere to go next, and why the founder network is part of the room.</p>
-    </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>3 of 20</span></div>
-  </div>
-</section>
-
-<!-- 4 Team -->
+<!-- 4 -->
 <section class="slide" id="s4">
   <div class="in">
-    <div class="rail"><p class="on">Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p class="on">Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
+    <div class="body">
+      <h2>The community and the studio feed each other</h2>
+      <div class="loop" style="margin-top:calc(24 * var(--px))">
+        <div class="step"><p class="num md">1</p><h3>Gather</h3><p class="sm quiet">Hackathons, demo days and the weekly Open House bring builders, founders, researchers and investors into one room.</p></div>
+        <div class="step"><p class="num md">2</p><h3>Build</h3><p class="sm quiet">Teams take on real problems and ship working prototypes on the FIG Event Platform.</p></div>
+        <div class="step"><p class="num md">3</p><h3>Found</h3><p class="sm quiet">The studio works with experienced operators and technical founders to turn the strongest ideas into AI-native companies.</p></div>
+        <div class="step"><p class="num md">4</p><h3>Compound</h3><p class="sm quiet">Founders become each other’s customers, advisors and investors, and bring the next room together.</p></div>
+      </div>
+      <div class="return" aria-hidden="true">
+        <svg viewBox="0 0 1400 70" preserveAspectRatio="none" fill="none"><path d="M1290 0 V34 Q1290 54 1270 54 H72 Q52 54 52 34 V10" stroke="#374AF1" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M44 16 L52 4 L60 16" stroke="#374AF1" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+      </div>
+      <p class="lead" style="margin-top:auto">Partners plug in at every step: on stage, in the build, at the demo, and across the founder network.</p>
+    </div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>4 of 19</span></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" id="s5">
+  <div class="in">
+    <div class="rail"><p>Why FIG</p><p class="on">Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
+    <div class="body">
+      <h2 class="sm">The studio: companies that begin with years inside an industry, not with a model</h2>
+      <p class="quiet" style="max-width:calc(1100 * var(--px))">FIG partners with experienced industry leaders, technical founders and repeat entrepreneurs. Ten companies so far.</p>
+      <div class="g2" style="gap:0 calc(96 * var(--px))">
+        <div class="list">
+          <div class="li tight"><b>Alchedata.AI</b><p class="quiet">Data infrastructure for physical AI</p></div>
+          <div class="li tight"><b>StoryVerse</b><p class="quiet">Creative AI video production</p></div>
+          <div class="li tight"><b>AgentX</b><p class="quiet">Build your first AI agent on the best LLMs</p></div>
+          <div class="li tight"><b>Numix</b><p class="quiet">Tax credits and accounting for startups</p></div>
+          <div class="li tight"><b>Laminar Health</b><p class="quiet">Ultra-compact wearable ultrasound</p></div>
+        </div>
+        <div class="list">
+          <div class="li tight"><b>NILE</b><p class="quiet">AI-powered product recommendations</p></div>
+          <div class="li tight"><b>Bitown</b><p class="quiet">Stablecoin-based payment infrastructure</p></div>
+          <div class="li tight"><b>Puppygraph</b><p class="quiet">Real-time, zero-ETL graph query engine</p></div>
+          <div class="li tight"><b>Inference.ai</b><p class="quiet">Virtualised GPU allocation across workloads</p></div>
+          <div class="li tight"><b>Stealth</b><p class="quiet">Led by a veteran AI executive</p></div>
+        </div>
+      </div>
+      <p class="sm quiet" style="margin-top:auto">Founders invest in one another. Member investments: InsForge, Augment Code, Complir.</p>
+    </div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>5 of 19</span></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" id="s6">
+  <div class="in">
+    <div class="rail"><p>Why FIG</p><p class="on">Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Who you’ll work with</h2>
       <p class="lead quiet">Industry operators and repeat founders. Partners get a named contact, not a form.</p>
@@ -211,35 +258,35 @@
         <div><div class="avatar">Headshot</div><h3 style="margin-top:calc(16 * var(--px))">[Founder name]</h3><p class="sm">[Role at FIG]</p><p class="sm quiet">[Ex-company, school]</p></div>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>4 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>6 of 19</span></div>
   </div>
 </section>
 
-<!-- 5 Numbers -->
-<section class="slide" id="s5">
+<!-- 7 -->
+<section class="slide" id="s7">
   <div class="in">
-    <div class="rail"><p>Studio</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body" style="gap:calc(48 * var(--px))">
-      <h2>In four weeks this autumn, FIG brought together</h2>
-      <div class="g3" style="gap:calc(48 * var(--px)) calc(48 * var(--px))">
-        <div class="stat"><p class="num">1,400<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>RSVPs</b><p class="sm quiet">Across two events in September and October. Sign-ups, not attendance.</p></div>
+      <h2>FIG at a glance, autumn 2026</h2>
+      <div class="g3" style="gap:calc(48 * var(--px))">
+        <div class="stat"><p class="num">1,400<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>RSVPs</b><p class="sm quiet">Across two events four weeks apart. Sign-ups, not attendance.</p></div>
         <div class="stat"><p class="num">250<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>People in the room</b><p class="sm quiet">Builders, founders, researchers and investors. An estimate.</p></div>
-        <div class="stat"><p class="num">25</p><b>Project submissions</b><p class="sm quiet">Working projects built and submitted in a single day.</p></div>
+        <div class="stat"><p class="num">25</p><b>Projects built in a day</b><p class="sm quiet">Working submissions at The Executable World.</p></div>
       </div>
-      <div class="g3" style="gap:calc(48 * var(--px)) calc(48 * var(--px))">
-        <div class="stat"><p class="num md">9</p><b>Industry judges</b><p class="sm quiet">Confirmed for the next makeathon, from Microsoft, OpenAI, Amazon and more.</p></div>
+      <div class="g3" style="gap:calc(48 * var(--px))">
         <div class="stat"><p class="num md">10</p><b>Portfolio companies</b><p class="sm quiet">In the venture studio, led by industry insiders.</p></div>
-        <div class="stat"><p class="num md">5</p><b>Friday Open Houses</b><p class="sm quiet">Weekly at the San Mateo office, five volumes so far.</p></div>
+        <div class="stat"><p class="num md">25<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>Partners and backers</b><p class="sm quiet">Across FIG events and the studio.</p></div>
+        <div class="stat"><p class="num md">Weekly</p><b>FIG Friday Open House</b><p class="sm quiet">At the San Mateo office, five so far.</p></div>
       </div>
     </div>
-    <div class="foot"><span>The Executable World, September 19, and Frontier in Action, October 10</span><span>5 of 20</span></div>
+    <div class="foot"><span>Event figures: The Executable World, September 19, and Frontier in Action, October 10</span><span>7 of 19</span></div>
   </div>
 </section>
 
-<!-- 6 Two events -->
-<section class="slide" id="s6">
+<!-- 8 -->
+<section class="slide" id="s8">
   <div class="in">
-    <div class="rail"><p>Studio</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Two full rooms</h2>
       <div class="g2" style="gap:calc(64 * var(--px));flex:1">
@@ -268,14 +315,14 @@
         </div>
       </div>
     </div>
-    <div class="foot"><span>Recaps at figstudio.vc/events</span><span>6 of 20</span></div>
+    <div class="foot"><span>Recaps at figstudio.vc/events</span><span>8 of 19</span></div>
   </div>
 </section>
 
-<!-- 7 Photos -->
-<section class="slide" id="s7">
+<!-- 9 -->
+<section class="slide" id="s9">
   <div class="in">
-    <div class="rail"><p>Studio</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Build sessions, panels, demos, mixers</h2>
       <div class="g4" style="gap:calc(24 * var(--px));margin-top:auto">
@@ -285,14 +332,14 @@
         <figure><img class="photo" style="aspect-ratio:2/3" src="../events/physical-ai-2026/img/networking.jpg" alt="Guests talking between sessions"><figcaption>Between sessions at Frontier in Action</figcaption></figure>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>7 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>9 of 19</span></div>
   </div>
 </section>
 
-<!-- 8 Network -->
-<section class="slide" id="s8">
+<!-- 10 -->
+<section class="slide" id="s10">
   <div class="in">
-    <div class="rail"><p>Studio</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Who is already in the room</h2>
       <p class="sm quiet" style="margin-bottom:calc(-24 * var(--px))">Partners and backers</p>
@@ -314,14 +361,14 @@
         <div class="li"><b>Judges and panelists have come from</b><p>Microsoft, OpenAI, Amazon, IDEO AI Lab, Turo, Reflection AI, NetMind.AI, Prosperity7 Ventures, OUP, Outset Ventures and CMU Safe AI Lab. They take part as individuals.</p></div>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>8 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>10 of 19</span></div>
   </div>
 </section>
 
-<!-- 9 People -->
-<section class="slide" id="s9">
+<!-- 11 -->
+<section class="slide" id="s11">
   <div class="in">
-    <div class="rail"><p>Studio</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p class="on">Proof</p><p>Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Industry leaders who have judged and spoken at FIG</h2>
       <div class="g2" style="gap:calc(48 * var(--px)) calc(96 * var(--px));margin-top:calc(8 * var(--px))">
@@ -343,14 +390,14 @@
         </div>
       </div>
     </div>
-    <div class="foot"><span>Full rosters on the event pages. Names appear with each person’s consent.</span><span>9 of 20</span></div>
+    <div class="foot"><span>Full rosters on the event pages. Names appear with each person’s consent.</span><span>11 of 19</span></div>
   </div>
 </section>
 
-<!-- 10 Platform -->
-<section class="slide" id="s10">
+<!-- 12 -->
+<section class="slide" id="s12">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p class="on">Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p class="on">Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Every event adds to the next</h2>
       <p class="lead quiet">We built our own end-to-end event platform. Builders and projects stay visible after the event, and partner activity is reported from real data.</p>
@@ -363,14 +410,14 @@
       </div>
       <p class="sm quiet" style="margin-top:auto;max-width:calc(1100 * var(--px))">After the event: a builders leaderboard across programs, project highlights that stay discoverable, and partner reporting on participation, submissions and tool usage.</p>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>10 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>12 of 19</span></div>
   </div>
 </section>
 
-<!-- 11 What gets built -->
-<section class="slide" id="s11">
+<!-- 13 -->
+<section class="slide" id="s13">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p class="on">Platform</p><p>Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p class="on">Platform</p><p>Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>What gets built in a day</h2>
       <p class="lead quiet">Two top winners from The Executable World. Partners see talent through prototypes and demos, not resumes.</p>
@@ -380,14 +427,14 @@
       </div>
       <p class="sm quiet" style="margin-top:auto">Also submitted: SafetyLens, PaperWeb, ArgusAI, Signage, Faultline, SimVal.Ai, RefundGuard, Injection Canary, ShipGate, OpenApps and more. All 25 stay visible on the platform.</p>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>11 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>13 of 19</span></div>
   </div>
 </section>
 
-<!-- 12 Why partners say yes -->
-<section class="slide" id="s12">
+<!-- 14 -->
+<section class="slide" id="s14">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>What partners come for</h2>
       <div class="list">
@@ -398,14 +445,14 @@
         <div class="li three tight"><b>A story to tell</b><p class="quiet">Education, community and communications teams</p><p>A ready-to-share recap with photos, project highlights and participation numbers.</p></div>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>12 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>14 of 19</span></div>
   </div>
 </section>
 
-<!-- 13 Ways to partner -->
-<section class="slide" id="s13">
+<!-- 15 -->
+<section class="slide" id="s15">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Next</p></div>
     <div class="body" style="gap:calc(32 * var(--px))">
       <h2>Five ways to take part, shaped with each partner</h2>
       <div class="list" style="--rowpad:calc(14 * var(--px))">
@@ -417,14 +464,14 @@
         <div class="li three tight"><div><b>Go deeper</b><p class="sm quiet">Private dinners</p></div><p>Support for a focused gathering of founders, researchers and technical leaders.</p><p>A shared topic, a curated guest profile and room for sustained conversation.</p></div>
       </div>
     </div>
-    <div class="foot"><span>Formats are starting points. Timing, scope and commitments are agreed with each partner.</span><span>13 of 20</span></div>
+    <div class="foot"><span>Formats are starting points. Timing, scope and commitments are agreed with each partner.</span><span>15 of 19</span></div>
   </div>
 </section>
 
-<!-- 14 Formats -->
-<section class="slide" id="s14">
+<!-- 16 -->
+<section class="slide" id="s16">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Three formats</h2>
       <div class="g3" style="gap:calc(64 * var(--px));margin-top:calc(8 * var(--px))">
@@ -433,40 +480,14 @@
         <div style="display:flex;flex-direction:column;gap:calc(16 * var(--px))"><h3>Tool and in-kind partner</h3><p class="num md" style="font-size:calc(72 * var(--px));line-height:1.25">Credits</p><p class="quiet">Licences, credits, datasets, compute or hardware for participants. Combines with any format.</p><p class="sm">Featured in the participant resource guide. A workshop or office hour with your team. A tool usage summary after the event. Credit on the event page and recap.</p></div>
       </div>
     </div>
-    <div class="foot"><span>Current makeathon tiers: Community $800, Supporting $3,500, Lead $5,000. Sponsorship does not influence judging.</span><span>14 of 20</span></div>
+    <div class="foot"><span>Current makeathon tiers: Community $800, Supporting $3,500, Lead $5,000. Sponsorship does not influence judging.</span><span>16 of 19</span></div>
   </div>
 </section>
 
-<!-- 15 Now -->
-<section class="slide" id="s15">
+<!-- 17 -->
+<section class="slide" id="s17">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p class="on">Now</p><p>Contact</p></div>
-    <div class="body">
-      <h2>On the calendar</h2>
-      <div class="row" style="gap:calc(56 * var(--px));margin-top:calc(8 * var(--px))">
-        <img class="photo" style="width:calc(360 * var(--px));height:calc(500 * var(--px));object-fit:contain;background:var(--tint-2)" src="../events/ai-design-makeathon/img/poster.jpg" alt="AI Design Makeathon 2026 poster">
-        <div class="grow" style="display:flex;flex-direction:column;gap:calc(16 * var(--px))">
-          <h3 style="font-size:calc(40 * var(--px))">AI Design Makeathon 2026</h3>
-          <p class="blue">November 7 to 9 online, Winner Demo November 14 in San Francisco</p>
-          <p class="quiet">Three days online for design students and young design professionals, building functional AI prototypes. Online judging November 10 to 12, then a Winner Demo, awards and mixer at Third Coast Foundry.</p>
-          <p>Hosted by FIG Studio, co-hosted with Lovable. Judges from Microsoft, OpenAI, Amazon, Reflection AI, IDEO AI Lab, Lenovo, Turo, NetMind.AI and Academy of Art University.</p>
-        </div>
-        <div style="width:calc(400 * var(--px));display:flex;flex-direction:column;gap:calc(16 * var(--px))">
-          <h3 style="font-size:calc(40 * var(--px))">FIG Friday Open House</h3>
-          <p class="blue">Every Friday afternoon, San Mateo</p>
-          <p class="quiet">At the FIG Studio office, for founders, VCs, researchers and business leaders.</p>
-          <p class="quiet">All events: luma.com/Fig-studio</p>
-        </div>
-      </div>
-    </div>
-    <div class="foot"><span>Makeathon partnership page: figstudio.vc/events/ai-design-makeathon-partnership</span><span>15 of 20</span></div>
-  </div>
-</section>
-
-<!-- 16 Principles -->
-<section class="slide" id="s16">
-  <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p class="on">Now</p><p>Contact</p></div>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p class="on">Partnering</p><p>Next</p></div>
     <div class="body">
       <h2>Four things we hold to, whatever the format</h2>
       <div class="g2" style="margin-top:calc(16 * var(--px))">
@@ -476,24 +497,41 @@
         <div><h3>The format is shaped together.</h3><p class="quiet">Timing, scope, recognition and deliverables are agreed with each partner before anything is announced.</p></div>
       </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>16 of 20</span></div>
+    <div class="foot"><span>FIG Studio partner deck</span><span>17 of 19</span></div>
   </div>
 </section>
 
-<!-- 17 Belief -->
-<section class="slide" id="s17">
+<!-- 18 -->
+<section class="slide" id="s18">
   <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p class="on">Contact</p></div>
-    <div class="body" style="justify-content:center;gap:calc(40 * var(--px))">
-      <h2 class="sm" style="max-width:calc(1300 * var(--px))">The next category-defining AI companies may not begin with the youngest founders or the most advanced model. They may begin with someone who has spent fifteen years inside an industry, and a community that puts frontier AI within reach.</h2>
-      <p class="lead quiet">FIG Studio was created to be that community. We would love to build it alongside partners who believe frontier AI should land where it matters most.</p>
+    <div class="rail"><p>Why FIG</p><p>Who we are</p><p>Proof</p><p>Platform</p><p>Partnering</p><p class="on">Next</p></div>
+    <div class="body">
+      <h2>What’s next</h2>
+      <div class="row" style="gap:calc(48 * var(--px));margin-top:calc(8 * var(--px))">
+        <img class="photo" style="width:calc(300 * var(--px));height:calc(420 * var(--px));object-fit:contain;background:var(--tint-2)" src="../events/ai-design-makeathon/img/poster.jpg" alt="AI Design Makeathon 2026 poster">
+        <div class="grow" style="display:flex;flex-direction:column;gap:calc(14 * var(--px))">
+          <h3>AI Design Makeathon 2026</h3>
+          <p class="sm blue">November 7 to 9 online. Winner Demo November 14, San Francisco.</p>
+          <p class="sm quiet">Design students and young design professionals build functional AI prototypes. Co-hosted with Lovable, with judges from Microsoft, OpenAI, Amazon and more.</p>
+        </div>
+        <div class="grow" style="display:flex;flex-direction:column;gap:calc(14 * var(--px))">
+          <h3>FIG Friday Open House</h3>
+          <p class="sm blue">Every Friday afternoon, San Mateo.</p>
+          <p class="sm quiet">Founders, VCs, researchers and business leaders at the FIG Studio office.</p>
+        </div>
+        <div class="grow" style="display:flex;flex-direction:column;gap:calc(14 * var(--px))">
+          <h3>2027 programs</h3>
+          <p class="sm blue">[Formats and dates to confirm]</p>
+          <p class="sm quiet">Partners who join now help choose the themes, the briefs and the rooms.</p>
+        </div>
+      </div>
     </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>17 of 20</span></div>
+    <div class="foot"><span>All events: luma.com/Fig-studio</span><span>18 of 19</span></div>
   </div>
 </section>
 
-<!-- 18 Contact -->
-<section class="slide closing" id="s18">
+<!-- 19 -->
+<section class="slide closing" id="s19">
   <div class="in">
     <img class="brand" src="../fig-logo-white.svg" alt="FIG Studio">
     <div style="display:flex;flex-direction:column;gap:calc(32 * var(--px))">
@@ -504,62 +542,6 @@
       <div><p>[Name], [Role]</p><p class="sm quiet">figstudio.vc, linkedin.com/company/figstudiovc</p></div>
       <a class="mail" href="mailto:contact@figstudio.vc">contact@figstudio.vc</a>
     </div>
-  </div>
-</section>
-
-<!-- 19 Appendix: portfolio -->
-<section class="slide" id="s19">
-  <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p><p class="on" style="margin-top:calc(14 * var(--px))">Appendix</p></div>
-    <div class="body">
-      <h2 class="sm">Portfolio: companies built by leaders who know their industries from the inside</h2>
-      <div class="g2" style="gap:0 calc(96 * var(--px))">
-        <div class="list">
-          <div class="li"><b>Alchedata.AI</b><p class="quiet">Data infrastructure for physical AI</p></div>
-          <div class="li"><b>StoryVerse</b><p class="quiet">Creative AI video production</p></div>
-          <div class="li"><b>AgentX</b><p class="quiet">Build your first AI agent on the best LLMs</p></div>
-          <div class="li"><b>Numix</b><p class="quiet">Tax credits and accounting for startups</p></div>
-          <div class="li"><b>Laminar Health</b><p class="quiet">Ultra-compact wearable ultrasound</p></div>
-        </div>
-        <div class="list">
-          <div class="li"><b>NILE</b><p class="quiet">AI-powered product recommendations</p></div>
-          <div class="li"><b>Bitown</b><p class="quiet">Stablecoin-based payment infrastructure</p></div>
-          <div class="li"><b>Puppygraph</b><p class="quiet">Real-time, zero-ETL graph query engine</p></div>
-          <div class="li"><b>Inference.ai</b><p class="quiet">Virtualised GPU allocation across workloads</p></div>
-          <div class="li"><b>Stealth</b><p class="quiet">Led by a veteran AI executive</p></div>
-        </div>
-      </div>
-      <p class="sm quiet" style="margin-top:auto">Member investments by FIG founders: InsForge, Augment Code, Complir</p>
-    </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>19 of 20</span></div>
-  </div>
-</section>
-
-<!-- 20 Appendix: makeathon judges -->
-<section class="slide" id="s20">
-  <div class="in">
-    <div class="rail"><p>Studio</p><p>Proof</p><p>Platform</p><p>Partnering</p><p>Now</p><p>Contact</p><p class="on" style="margin-top:calc(14 * var(--px))">Appendix</p></div>
-    <div class="body">
-      <h2 class="sm">AI Design Makeathon 2026 judges</h2>
-      <div class="g2" style="gap:0 calc(96 * var(--px))">
-        <div class="list">
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Lewis Liu</b><p class="quiet">Microsoft, product, agents and knowledge systems</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Xinyu Qu</b><p class="quiet">OpenAI, Applied AI Engineer</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Fred McHale</b><p class="quiet">Academy of Art University, Executive Director of Product Design</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Heewon Moon</b><p class="quiet">Microsoft, Product Designer</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Ziyuan “Zoey” Zhu</b><p class="quiet">IDEO AI Lab, Creative Technologist and Project Lead</p></div>
-        </div>
-        <div class="list">
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Neha</b><p class="quiet">Amazon, UX Designer</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Yitong Wang</b><p class="quiet">Lenovo, User Experience Designer</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Hao Wang</b><p class="quiet">NetMind.AI, Chief Strategy and Business Growth Officer</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Xuyan Zhao</b><p class="quiet">Turo, Principal Product Manager, AI</p></div>
-          <div class="li" style="grid-template-columns:1fr 1.3fr"><b>Kaushal Patel</b><p class="quiet">Reflection AI, Software Engineer, training data infrastructure</p></div>
-        </div>
-      </div>
-      <p class="sm quiet" style="margin-top:auto">University judges from The University of Chicago and University of Michigan to be announced. Final criteria and format to be confirmed.</p>
-    </div>
-    <div class="foot"><span>FIG Studio partner deck</span><span>20 of 20</span></div>
   </div>
 </section>
 
