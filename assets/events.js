@@ -26,8 +26,8 @@
       ends: '2026-11-09',
       blurb: 'Three days for design students to turn AI problems into working prototypes.',
       href: PLATFORM + '/e/fig-ai-design-makeathon-2026',
-      img: '/events/ai-design-makeathon/img/poster.jpg',
-      imgAlt: 'Poster for the AI Design Student Makeathon, November 7 to 9, online'
+      img: '/events/ai-design-makeathon/img/poster.jpg?v=20261024',
+      imgAlt: 'Poster for the AI Design Makeathon: online November 7 to 9, on-site award and winner demo at Third Coast Foundry, San Francisco, on November 14'
     },
     {
       title: 'Frontier in Action: Physical Intelligence',
