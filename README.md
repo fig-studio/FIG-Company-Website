@@ -32,6 +32,11 @@ Blocks that must stay identical on all four pages (copy from the partnership pag
 
 The two sponsor pages are the same page apart from prices: edit both together.
 
+## Labs
+
+`/labs/vision-card` is a noindex, unlinked exploration page for the vision card
+(`assets/vision-card/`, see its README). Nothing on the live site uses it yet.
+
 ## Event design system
 
 `tools/event-theme/build.py` derives an event's colours, type, chips and pixel-mosaic motif from its poster and writes

@@ -28,6 +28,15 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/labs/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,53 @@
+/*
+ * Vision card. Square corners; the card itself never moves, tilts or scales.
+ * Themes set --vc-bg, --vc-fg and --vc-box (the JS reads its colours from
+ * the mount options, so keep the two in step).
+ */
+.vcard{
+  --vc-bg:#0B0B0C;
+  --vc-fg:#FFFFFF;
+  --vc-fg-muted:rgba(255,255,255,.72);
+  --vc-box:#FFFFFF;
+  --vc-pad:24px;
+  position:relative;
+  isolation:isolate;
+  display:flex;flex-direction:column;justify-content:space-between;
+  width:100%;max-width:360px;
+  aspect-ratio:var(--vc-aspect,4/5);
+  padding:var(--vc-pad);
+  overflow:hidden;
+  border-radius:0;
+  background:var(--vc-bg);
+  color:var(--vc-fg);
+  font-family:'Inter',-apple-system,sans-serif;
+}
+.vcard--discord{
+  --vc-bg:linear-gradient(160deg,#5865F2 0%,#5B4FE0 55%,#3B2FB0 100%);
+  --vc-box:#FF3FD4;
+}
+.vcard--liveblocks{
+  --vc-bg:#0B0B0C;
+  --vc-box:#FFFFFF;
+}
+
+/* Effect layers: behind the copy, never hit-tested, so links stay clickable. */
+.vcard__art{position:absolute;inset:0;z-index:0;pointer-events:none}
+.vcard__art canvas,.vcard__art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.vcard>:not(.vcard__art){position:relative;z-index:1}
+
+.vcard__box-frame{fill:none;stroke:currentColor;stroke-width:1}
+.vcard__box-corners{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
+.vcard__box-label{fill:currentColor;font:500 9px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
+.vcard__link{stroke:currentColor;stroke-width:1}
+
+.vcard__head{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.vcard__mark{width:22px;height:22px;flex:none;fill:currentColor}
+.vcard__foot{display:flex;flex-direction:column;gap:10px}
+.vcard__desc{margin:0;font-size:15px;line-height:1.45;color:var(--vc-fg-muted);max-width:28ch}
+.vcard__cta{
+  display:inline-flex;align-items:center;gap:6px;align-self:flex-start;
+  color:var(--vc-fg);font-size:13px;font-weight:500;text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px;
+}
+.vcard__cta:hover{border-bottom-color:currentColor}
+.vcard__cta:focus-visible{outline:2px solid var(--vc-fg);outline-offset:3px}

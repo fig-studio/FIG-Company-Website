@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Vision Card Lab</title>
+<link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/vision-card/vision-card.css">
+<style>
+:root{--ground:#FAF9F4;--ink:#241F1A;--ink-soft:#5A5248;--line:rgba(36,31,26,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font:14px/1.5 'Inter',-apple-system,sans-serif}
+main{padding:48px 16px 96px;max-width:1000px}
+h1{font-size:18px;font-weight:600;margin:0 0 4px}
+.intro{color:var(--ink-soft);max-width:62ch;margin:0 0 32px}
+.stage{display:flex;flex-wrap:wrap;gap:24px}
+.slot{flex:1 1 300px;max-width:360px}
+.tag{margin-top:8px;font-size:12px;color:#9a3b00}
+.ghost{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;
+  border:1.5px solid #e00;pointer-events:none;z-index:50;display:none}
+
+/* tuning panel: demo only */
+.panel{position:fixed;right:0;top:0;bottom:0;width:300px;overflow:auto;background:#fff;border-left:1px solid var(--line);
+  padding:14px 16px 40px;font-size:12px;z-index:40}
+.panel h2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:18px 0 6px}
+.panel label{display:grid;grid-template-columns:96px 1fr 44px;align-items:center;gap:6px;margin:3px 0}
+.panel output{font-variant-numeric:tabular-nums;text-align:right}
+.panel select,.panel button,.panel input[type=color]{font:inherit}
+.panel .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:6px 0}
+.panel button{padding:4px 8px;border:1px solid var(--line);background:#f6f6f3;cursor:pointer}
+.panel textarea{width:100%;height:120px;font:11px ui-monospace,Menlo,monospace}
+.panel-toggle{position:fixed;right:12px;bottom:12px;z-index:41;padding:6px 10px;font:inherit;font-size:12px;border:1px solid var(--line);background:#fff}
+body.has-panel main{margin-right:300px}
+body:not(.has-panel) .panel{display:none}
+@media (max-width:760px){
+  body.has-panel main{margin-right:0}
+  .panel{top:auto;height:55vh;width:100%;border-left:0;border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body class="has-panel">
+<main>
+  <h1>Vision card lab</h1>
+  <p class="intro">Built from a written description; the reference video wasn't viewed. Every value in the panel is a starting point to tune by eye against the reference. Both brand masks are unverified (see the notes under the cards).</p>
+
+  <div class="stage">
+    <div class="slot">
+      <div class="vcard vcard--discord" id="card-discord">
+        <div class="vcard__head"><svg class="vcard__mark" viewBox="0 0 127.14 96.36" aria-hidden="true"><path id="mark-discord"/></svg>Discord</div>
+        <div class="vcard__foot">
+          <p class="vcard__desc">Placeholder copy: a line on how this customer uses the product.</p>
+          <a class="vcard__cta" href="#discord">Read the story <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="tag" data-note="discord"></div>
+    </div>
+    <div class="slot">
+      <div class="vcard vcard--liveblocks" id="card-liveblocks">
+        <div class="vcard__head"><svg class="vcard__mark" viewBox="0 0 100 100" aria-hidden="true"><path id="mark-liveblocks"/></svg>liveblocks</div>
+        <div class="vcard__foot">
+          <p class="vcard__desc">Placeholder copy: a line on how this customer uses the product.</p>
+          <a class="vcard__cta" href="#liveblocks">Read the story <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="tag" data-note="liveblocks"></div>
+    </div>
+  </div>
+</main>
+
+<div class="ghost" id="ghost"></div>
+<button class="panel-toggle" id="panel-toggle" type="button">Panel</button>
+<aside class="panel" id="panel" aria-label="Tuning panel">
+  <h2>Replay</h2>
+  <div class="row">
+    <button type="button" id="rp-play">Play path</button>
+    <button type="button" id="rp-freeze">Freeze at T</button>
+    <button type="button" id="rp-live">Back to live</button>
+  </div>
+  <label>T (s)<input type="range" id="rp-t" min="0" max="6" step="0.05" value="1.2"><output id="rp-t-out">1.20</output></label>
+  <div class="row" id="rp-state">live</div>
+  <div id="controls"></div>
+  <h2>Theme</h2>
+  <div class="row">Discord line <input type="color" data-theme="0.line" value="#ffffff"> box <input type="color" data-theme="0.box" value="#ff3fd4"></div>
+  <div class="row">liveblocks line <input type="color" data-theme="1.line" value="#ffffff"> box <input type="color" data-theme="1.box" value="#ffffff"></div>
+  <h2>Config</h2>
+  <div class="row"><button type="button" id="cfg-copy">Copy params as JSON</button><button type="button" id="cfg-reset">Defaults</button></div>
+  <textarea id="cfg-out" readonly aria-label="Current params"></textarea>
+</aside>
+
+<script src="/assets/vision-card/masks.js"></script>
+<script src="/assets/vision-card/vision-card.js"></script>
+<script>
+(function () {
+  var M = window.VisionCardMasks;
+  document.getElementById('mark-discord').setAttribute('d', M.discord.path);
+  document.getElementById('mark-discord').setAttribute('fill-rule', 'evenodd');
+  document.getElementById('mark-liveblocks').setAttribute('d', M.liveblocks.path);
+  document.querySelectorAll('[data-note]').forEach(function (n) {
+    var m = M[n.getAttribute('data-note')];
+    if (m.placeholder) n.textContent = 'Mask: ' + m.note + '.';
+  });
+
+  var themes = [{ line: '#ffffff', box: '#ff3fd4' }, { line: '#ffffff', box: '#ffffff' }];
+  var cards = [
+    VisionCard.mount(document.getElementById('card-discord'), { mask: M.discord, theme: themes[0], seed: 11 }),
+    VisionCard.mount(document.getElementById('card-liveblocks'), { mask: M.liveblocks, theme: themes[1], seed: 23 })
+  ];
+
+  // ------------------------------------------------------------ panel
+  var SCHEMA = [
+    ['Pattern'],
+    ['pitch', 2, 10, 0.25], ['lineWidth', 0.25, 3, 0.05], ['maskScale', 0.3, 1.2, 0.01], ['maskX', 0, 1, 0.01], ['maskY', 0, 1, 0.01],
+    ['base', 0, 1.5, 0.01], ['outside', 0, 0.4, 0.01], ['contrast', 0, 1, 0.01],
+    ['Idle motion'],
+    ['noise', 0, 1, 0.01], ['noiseSpeed', 0, 3, 0.05], ['flow', 0, 0.5, 0.005],
+    ['rain', 0, 1, 0.01], ['rainSpeed', 0, 1, 0.01], ['rainLength', 0.01, 0.3, 0.005], ['rainOutside', 0, 1, 0.01],
+    ['Pointer'],
+    ['radius', 10, 200, 1], ['boost', 0, 5, 0.05], ['jitter', 0, 3, 0.05], ['sparkle', 0, 1, 0.01], ['smoothing', 0, 0.4, 0.005],
+    ['trailDecay', 0.05, 2, 0.01], ['trailStrength', 0, 1.5, 0.01], ['hoverIn', 0, 0.6, 0.01], ['hoverOut', 0.02, 2, 0.01],
+    ['Detection boxes'],
+    ['maxBoxes', 1, 12, 1], ['boxMin', 8, 120, 1], ['boxMax', 16, 220, 1], ['spawnInterval', 0.05, 1.5, 0.01],
+    ['spawnSpread', 0, 160, 1], ['boxLife', 0.1, 3, 0.05], ['boxFadeIn', 0, 0.5, 0.01], ['boxFadeOut', 0.02, 1.5, 0.01],
+    ['linkChance', 0, 1, 0.01], ['linkMaxDist', 20, 400, 5],
+    ['labels', ['conf', 'id', 'both', 'none']],
+    ['Sweep (unconfirmed)'],
+    ['sweep', ['off', 'enter', 'inview']], ['sweepDuration', 0.3, 3, 0.05]
+  ];
+  var host = document.getElementById('controls');
+  var inputs = {};
+  SCHEMA.forEach(function (s) {
+    if (s.length === 1) { var h = document.createElement('h2'); h.textContent = s[0]; host.appendChild(h); return; }
+    var key = s[0], lab = document.createElement('label'), input, out = document.createElement('output');
+    lab.appendChild(document.createTextNode(key));
+    if (Array.isArray(s[1])) {
+      input = document.createElement('select');
+      s[1].forEach(function (o) { var op = document.createElement('option'); op.value = op.textContent = o; input.appendChild(op); });
+    } else {
+      input = document.createElement('input');
+      input.type = 'range'; input.min = s[1]; input.max = s[2]; input.step = s[3];
+    }
+    input.value = VisionCard.DEFAULTS[key];
+    out.textContent = input.value;
+    input.addEventListener('input', function () {
+      var v = input.tagName === 'SELECT' ? input.value : parseFloat(input.value);
+      out.textContent = input.value;
+      var patch = {}; patch[key] = v;
+      cards.forEach(function (c) { c.setParams(patch); });
+      showConfig();
+      if (mode === 'freeze') freeze(+tInput.value);
+    });
+    lab.appendChild(input); lab.appendChild(out);
+    host.appendChild(lab);
+    inputs[key] = { input: input, out: out };
+  });
+
+  document.querySelectorAll('[data-theme]').forEach(function (inp) {
+    inp.addEventListener('input', function () {
+      var k = inp.getAttribute('data-theme').split('.');
+      themes[+k[0]][k[1]] = inp.value;
+      cards[+k[0]].setTheme(themes[+k[0]]);
+      showConfig();
+    });
+  });
+
+  function config() {
+    var diff = {};
+    for (var k in cards[0].p) if (cards[0].p[k] !== VisionCard.DEFAULTS[k]) diff[k] = cards[0].p[k];
+    return { params: diff, themes: { discord: themes[0], liveblocks: themes[1] } };
+  }
+  function showConfig() { document.getElementById('cfg-out').value = JSON.stringify(config(), null, 2); }
+  showConfig();
+  document.getElementById('cfg-copy').addEventListener('click', function () {
+    var t = document.getElementById('cfg-out');
+    t.select();
+    if (navigator.clipboard) navigator.clipboard.writeText(t.value).catch(function () {});
+  });
+  document.getElementById('cfg-reset').addEventListener('click', function () {
+    cards.forEach(function (c) { c.setParams(VisionCard.DEFAULTS); });
+    for (var k in inputs) { inputs[k].input.value = VisionCard.DEFAULTS[k]; inputs[k].out.textContent = VisionCard.DEFAULTS[k]; }
+    showConfig();
+  });
+  document.getElementById('panel-toggle').addEventListener('click', function () { document.body.classList.toggle('has-panel'); });
+
+  // ------------------------------------------------------------ replay
+  // A fixed pointer path in card-normalised coordinates: across Discord,
+  // straight over to liveblocks, then off the cards. card -1 = outside.
+  var PATH = [
+    [0.0, -1], [0.4, 0, 0.12, 0.22], [1.0, 0, 0.55, 0.42], [1.6, 0, 0.82, 0.58], [2.0, 0, 0.42, 0.66],
+    [2.3, 1, 0.10, 0.50], [3.0, 1, 0.50, 0.34], [3.6, 1, 0.76, 0.56], [4.0, -1], [6.0, -1]
+  ];
+  var DT = 1 / 60;
+
+  function pointerAt(t) {
+    for (var i = PATH.length - 1; i >= 0; i--) if (t >= PATH[i][0]) break;
+    var a = PATH[Math.max(0, i)], b = PATH[i + 1];
+    if (a[1] < 0) return null;
+    if (!b || b[1] !== a[1]) return { card: a[1], u: a[2], v: a[3] };
+    var k = (t - a[0]) / (b[0] - a[0]);
+    return { card: a[1], u: a[2] + (b[2] - a[2]) * k, v: a[3] + (b[3] - a[3]) * k };
+  }
+
+  function simulateTo(T) {
+    cards.forEach(function (c) { c.hold(); c.reset(); });
+    var n = Math.round(T / DT), q = null;
+    for (var i = 0; i < n; i++) {
+      q = pointerAt(i * DT);
+      cards.forEach(function (c, ci) {
+        if (q && q.card === ci) c.setPointer(q.u * c.w, q.v * c.h, true);
+        else c.setPointer(c.ptr.x, c.ptr.y, false);
+        c.step(DT);
+      });
+    }
+    cards.forEach(function (c) { c.render(); });
+    showGhost(q);
+  }
+
+  var ghost = document.getElementById('ghost');
+  function showGhost(q) {
+    if (!q) { ghost.style.display = 'none'; return; }
+    var r = cards[q.card].el.getBoundingClientRect();
+    ghost.style.display = 'block';
+    ghost.style.transform = 'translate(' + (r.left + q.u * r.width) + 'px,' + (r.top + q.v * r.height) + 'px)';
+  }
+
+  var mode = 'live', playRaf = null;
+  var tInput = document.getElementById('rp-t'), tOut = document.getElementById('rp-t-out'), stateEl = document.getElementById('rp-state');
+  function setMode(m, extra) { mode = m; stateEl.textContent = m + (extra || ''); }
+
+  function freeze(T) {
+    cancelAnimationFrame(playRaf);
+    simulateTo(T);
+    setMode('freeze', ' at T = ' + T.toFixed(2) + ' s');
+  }
+  function play() {
+    cancelAnimationFrame(playRaf);
+    cards.forEach(function (c) { c.hold(); c.reset(); });
+    var start = null, simT = 0, end = PATH[PATH.length - 1][0];
+    setMode('playing');
+    playRaf = requestAnimationFrame(function tick(ts) {
+      if (start === null) start = ts;
+      var target = Math.min(end, (ts - start) / 1000), q = null;
+      while (simT + DT <= target + 1e-9) {
+        q = pointerAt(simT);
+        cards.forEach(function (c, ci) {
+          if (q && q.card === ci) c.setPointer(q.u * c.w, q.v * c.h, true);
+          else c.setPointer(c.ptr.x, c.ptr.y, false);
+          c.step(DT);
+        });
+        simT += DT;
+      }
+      cards.forEach(function (c) { c.render(); });
+      showGhost(pointerAt(simT));
+      tInput.value = simT; tOut.textContent = simT.toFixed(2);
+      if (target < end) playRaf = requestAnimationFrame(tick);
+      else setMode('freeze', ' at end of path');
+    });
+  }
+  function live() {
+    cancelAnimationFrame(playRaf);
+    showGhost(null);
+    cards.forEach(function (c) { c.reset(); c.release(); });
+    setMode('live');
+  }
+
+  tInput.addEventListener('input', function () { tOut.textContent = (+tInput.value).toFixed(2); freeze(+tInput.value); });
+  document.getElementById('rp-freeze').addEventListener('click', function () { freeze(+tInput.value); });
+  document.getElementById('rp-play').addEventListener('click', play);
+  document.getElementById('rp-live').addEventListener('click', live);
+
+  // ?replay=1.2 opens frozen at that time (for screenshots); ?panel=0 hides the panel.
+  var qs = new URLSearchParams(location.search);
+  if (qs.get('panel') === '0') document.body.classList.remove('has-panel');
+
+  function whenReady(fn) {
+    if (cards.every(function (c) { return c.maskRect; })) fn();
+    else setTimeout(function () { whenReady(fn); }, 20);
+  }
+  whenReady(function () {
+    if (qs.has('replay')) { tInput.value = qs.get('replay'); tOut.textContent = (+tInput.value).toFixed(2); freeze(+qs.get('replay')); }
+    document.documentElement.setAttribute('data-ready', '1');
+  });
+
+  window.__vc = { cards: cards, freeze: freeze, play: play, live: live, simulateTo: simulateTo, pointerAt: pointerAt };
+})();
+</script>
+</body>
+</html>
