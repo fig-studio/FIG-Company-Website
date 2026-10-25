@@ -111,8 +111,8 @@
   .step { display: flex; flex-direction: column; gap: calc(12 * var(--px)); position: relative; }
   .return { height: calc(70 * var(--px)); margin-top: calc(-16 * var(--px)); }
   .return svg { width: 100%; height: 100%; display: block; }
-  .constellation { position: absolute; right: calc(120 * var(--px)); top: calc(120 * var(--px)); width: calc(880 * var(--px)); height: calc(840 * var(--px)); }
-  .constellation svg { width: 100%; height: 100%; }
+  .collage { position: absolute; top: 0; right: 0; bottom: 0; left: calc(900 * var(--px)); display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); gap: calc(8 * var(--px)); }
+  .collage img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 0; }
 
   .closing { background: var(--blue); color: var(--paper); }
   .closing .in { padding: calc(96 * var(--px)) calc(120 * var(--px)); display: flex; flex-direction: column; justify-content: space-between; }
@@ -137,28 +137,21 @@
 <!-- 1 -->
 <section class="slide cover" id="s1">
   <div class="in">
-    <div class="constellation" aria-hidden="true">
-      <svg viewBox="0 0 880 840" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#374AF1" stroke-width="1.5" opacity=".55">
-          <line x1="440" y1="420" x2="150" y2="150"/><line x1="440" y1="420" x2="700" y2="110"/><line x1="440" y1="420" x2="790" y2="440"/><line x1="440" y1="420" x2="640" y2="730"/><line x1="440" y1="420" x2="230" y2="700"/><line x1="440" y1="420" x2="110" y2="430"/>
-          <line x1="150" y1="150" x2="700" y2="110" stroke-dasharray="4 8"/><line x1="790" y1="440" x2="640" y2="730" stroke-dasharray="4 8"/><line x1="230" y1="700" x2="110" y2="430" stroke-dasharray="4 8"/><line x1="700" y1="110" x2="790" y2="440" stroke-dasharray="4 8"/>
-        </g>
-        <g fill="#E4D5CD" stroke="#374AF1" stroke-width="1.5">
-          <circle cx="150" cy="150" r="22"/><circle cx="700" cy="110" r="22"/><circle cx="790" cy="440" r="22"/><circle cx="640" cy="730" r="22"/><circle cx="230" cy="700" r="22"/><circle cx="110" cy="430" r="22"/>
-        </g>
-        <circle cx="440" cy="420" r="54" fill="#374AF1"/>
-        <g font-family="Sora, sans-serif" font-size="22" fill="#241F1A">
-          <text x="180" y="130">Designers</text><text x="600" y="90">Engineers</text><text x="690" y="490">Founders</text><text x="540" y="780">Researchers</text><text x="140" y="750">Investors</text><text x="20" y="400">Industry leaders</text>
-        </g>
-        <text x="440" y="429" text-anchor="middle" font-family="Sora, sans-serif" font-size="26" font-weight="500" fill="#FAF9F4">FIG</text>
-      </svg>
+    <div class="collage" aria-label="Photos from FIG events">
+      <img src="../events/physical-ai-2026/img/audience.jpg" alt="Standing-room crowd at Frontier in Action" style="grid-column:span 2;grid-row:span 2">
+      <img src="../events/physical-ai-2026/img/yummy-guests.jpg" alt="Guests with drinks between sessions" style="object-position:60% 40%">
+      <img src="../events/executable-world-2026/img/community-banner.jpg" alt="Builders and judges at The Executable World" style="object-position:50% 45%">
+      <img src="../events/executable-world-2026/img/hero.jpg" alt="Builders watching a live demo at The Executable World" style="grid-row:span 2;object-position:55% 50%">
+      <img src="../events/physical-ai-2026/img/demo-roboforce.jpg" alt="RoboForce presenting on stage" style="grid-column:span 2;object-position:50% 70%">
+      <img src="../events/physical-ai-2026/img/networking.jpg" alt="Guests talking after the panel" style="object-position:55% 40%">
+      <img src="../events/physical-ai-2026/img/panel.jpg" alt="Investor and research panel at Frontier in Action" style="object-position:50% 60%">
     </div>
     <img class="brand" src="../fig-logo-vector.svg" alt="FIG Studio">
-    <div style="display:flex;flex-direction:column;gap:calc(32 * var(--px));max-width:calc(900 * var(--px))">
-      <h1>Where<br>frontier AI<br>lands.</h1>
-      <p class="lead quiet" style="max-width:calc(720 * var(--px))">An introduction to FIG Studio for partners: why we exist, what we have built, and how to build with us.</p>
+    <div style="display:flex;flex-direction:column;gap:calc(32 * var(--px));max-width:calc(700 * var(--px))">
+      <h1 style="font-size:calc(132 * var(--px))">Where<br>frontier AI<br>lands.</h1>
+      <p class="lead quiet" style="max-width:calc(660 * var(--px))">An introduction to FIG Studio for partners: why we exist, what we have built, and how to build with us.</p>
     </div>
-    <p class="sm quiet">Partner deck, autumn 2026</p>
+    <p class="sm quiet" style="max-width:calc(660 * var(--px))">Partner deck, autumn 2026.<br>Photos from The Executable World and Frontier in Action.</p>
   </div>
 </section>
 
