@@ -18,7 +18,7 @@ Four stand-alone pages are live but deliberately not linked from anywhere on the
 - `/events/ai-design-makeathon-sponsor-packages` (sponsor packages with prices; share only with sponsors you are negotiating with)
 - `/events/ai-design-makeathon-university` (university partnership)
 - `/events/ai-design-makeathon-partnership` (industry partnership, no pricing)
-- `/partners/fig-studio-partner-deck` (company-level partner deck, 7 slides: cover, who we are, proven track record, founders, partners and backers, what we look for in partners, and a "Be with us" close; styled after the FIG event posters and slides: JetBrains Mono capitals for titles, a mono header strip and chapter labels, and a blue pixel mosaic (`partners/pixels-*.svg`) in FIG's own blue; print to PDF from the browser for an attachment. Founder details and the contact name carry `[placeholders]` until filled)
+- `/partners/fig-studio-partner-deck` (company-level partner deck, 7 slides: cover, who we are, proven track record, founders, partners and backers, what we look for in partners, and a "Be with us" close; styled after the FIG event posters and slides: Roboto Mono capitals for titles, Roboto for text, a mono header strip and chapter labels, and a blue pixel mosaic (`partners/pixels-*.svg`) in FIG's own blue; print to PDF from the browser for an attachment. Founder details and the contact name carry `[placeholders]` until filled)
 
 They share `events/ai-design-makeathon/` (theme, `page.css`, `page.js`, images). The prior-event figures on these pages
 are read from the recap page at load time, with static fallbacks in the markup.
