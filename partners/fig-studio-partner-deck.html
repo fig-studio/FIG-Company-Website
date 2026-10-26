@@ -96,7 +96,8 @@
   .panel { background: var(--tint-2); border-radius: calc(16 * var(--px)); padding: calc(32 * var(--px)); display: flex; flex-direction: column; gap: calc(12 * var(--px)); }
   .avatar { background: var(--tint); border-radius: 50%; aspect-ratio: 1; width: 100%; display: flex; align-items: center; justify-content: center; color: var(--ink-2); font-size: calc(20 * var(--px)); overflow: hidden; }
   .avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .founder { width: calc(220 * var(--px)); display: flex; flex-direction: column; gap: calc(4 * var(--px)); }
+  .founder { display: flex; flex-direction: column; gap: calc(6 * var(--px)); }
+  .founder .avatar { width: calc(150 * var(--px)); }
   .founder h3 { font-size: calc(28 * var(--px)); margin-top: calc(14 * var(--px)); }
 
   img.photo { width: 100%; object-fit: cover; display: block; }
@@ -130,7 +131,7 @@
   .collage { position: absolute; top: 0; right: 0; bottom: 0; left: calc(900 * var(--px)); display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); gap: calc(8 * var(--px)); }
   .collage img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 0; }
 
-  .closing { background: var(--blue); color: var(--paper); }
+  .closing { background: #2B2A28; color: var(--paper); }
   .closing .in { padding: calc(96 * var(--px)) calc(120 * var(--px)); display: flex; flex-direction: column; justify-content: space-between; }
   .closing .quiet { color: rgba(250,249,244,.8); }
   .mail { font-size: calc(44 * var(--px)); font-weight: 500; color: var(--paper); text-decoration: none; border-bottom: 2px solid rgba(250,249,244,.6); padding-bottom: calc(6 * var(--px)); }
@@ -237,18 +238,16 @@
     <div class="body">
       <p class="eyebrow">Founders</p>
       <h2>Who you’ll work with</h2>
-      <p class="lead quiet">FIG Studio is founded by Chris Zhong, Vicky [surname], Fei Wang and Dan He. Partners get a named contact, not a form.</p>
-      <div class="row" style="margin-top:auto;gap:calc(36 * var(--px));align-items:flex-start">
-        <div class="founder"><div class="avatar">Headshot</div><h3>Chris Zhong</h3><p class="sm">Co-founder</p><p class="sm quiet">[Background]</p></div>
-        <div class="founder"><div class="avatar">Headshot</div><h3>Vicky [surname]</h3><p class="sm">Co-founder</p><p class="sm quiet">[Background]</p></div>
-        <div class="founder"><div class="avatar">Headshot</div><h3>Fei Wang</h3><p class="sm">Co-founder</p><p class="sm quiet">[Background]</p></div>
-        <div class="founder"><div class="avatar">Headshot</div><h3>Dan He</h3><p class="sm">Co-founder</p><p class="sm quiet">[Background]</p></div>
-        <div class="panel grow" style="gap:calc(10 * var(--px));padding:calc(32 * var(--px))">
-          <p class="sm quiet">Before FIG</p>
-          <p class="num md">25<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p>
-          <b style="font-weight:500;font-size:calc(24 * var(--px))">events run by Chris and Vicky</b>
-          <p class="sm quiet">In the Bay Area and Singapore, plus demo days around CES and NVIDIA GTC. Partners included Google Cloud, OpenAI, AWS, Alibaba Cloud and BytePlus. Their YC Founder Night drew 616 registrations.</p>
-        </div>
+      <p class="lead quiet">Investors, AI researchers and designers who have built teams and products at scale. Partners get a named contact, not a form.</p>
+      <div class="g4" style="margin-top:auto;gap:calc(48 * var(--px))">
+        <div class="founder"><div class="avatar">Headshot</div><h3>Chris Zhong, CFA</h3><p class="sm">Former Investment Principal, Prosperity7 Ventures</p><p class="sm quiet">Former Investor, Nationwide Ventures · Previously J.P. Morgan</p></div>
+        <div class="founder"><div class="avatar">Headshot</div><h3>Vicky [surname]</h3><p class="sm">[Most notable role]</p><p class="sm quiet">[Previous roles]</p></div>
+        <div class="founder"><div class="avatar">Headshot</div><h3>Fei Wang</h3><p class="sm">Former Head of Personalization Science, Amazon Prime Video</p><p class="sm quiet">Former Senior Director, AI Research, Visa · Previously IBM Research</p></div>
+        <div class="founder"><div class="avatar">Headshot</div><h3>Dan He</h3><p class="sm">Founding Designer, Virtue AI</p><p class="sm quiet">Previously OPPO and Mindray</p></div>
+      </div>
+      <div class="panel" style="flex-direction:row;align-items:center;gap:calc(40 * var(--px));padding:calc(26 * var(--px)) calc(36 * var(--px))">
+        <p class="num md" style="flex:none">25<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p>
+        <p class="sm quiet" style="max-width:calc(1250 * var(--px))"><b style="font-weight:500;color:var(--ink)">Events run by Chris and Vicky before FIG,</b> in the Bay Area and Singapore and around CES and NVIDIA GTC, with partners including Google Cloud, OpenAI, AWS and Alibaba Cloud.</p>
       </div>
     </div>
     <div class="foot"><span>FIG Studio</span><span>04 / 07</span></div>
@@ -323,7 +322,7 @@
     </div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:calc(64 * var(--px))">
       <div><p style="font-size:calc(26 * var(--px))">[Name], [Role]</p><p class="sm quiet">figstudio.vc · linkedin.com/company/figstudiovc · luma.com/Fig-studio</p></div>
-      <a class="mail" href="mailto:contact@figstudio.vc" style="font-family:var(--mono)">contact@figstudio.vc</a>
+      <a class="mail" href="mailto:contact@figstudio.vc" style="font-family:var(--mono);color:var(--blue-2);border-color:rgba(142,153,247,.6)">contact@figstudio.vc</a>
     </div>
   </div>
 </section>
