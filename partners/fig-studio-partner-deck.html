@@ -121,6 +121,9 @@
   .return svg { width: 100%; height: 100%; display: block; }
   .edge { position: absolute; top: 0; bottom: 0; left: calc(780 * var(--px)); width: calc(240 * var(--px)); height: 100%; z-index: 2; pointer-events: none; }
   .label { font-family: var(--mono); font-size: calc(19 * var(--px)); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+  .big-event { display: flex; flex-direction: column; gap: calc(16 * var(--px)); }
+  .big-event .photo { height: calc(340 * var(--px)); border-radius: calc(12 * var(--px)); margin-bottom: calc(12 * var(--px)); }
+  .big-event h3 { font-size: calc(34 * var(--px)); margin-bottom: calc(12 * var(--px)); }
   .event { display: flex; flex-direction: column; gap: calc(10 * var(--px)); }
   .event .photo { height: calc(250 * var(--px)); border-radius: calc(12 * var(--px)); margin-bottom: calc(6 * var(--px)); }
   .event h3 { font-size: calc(28 * var(--px)); }
@@ -196,22 +199,33 @@
   <div class="in">
     <div class="hdr"><span>FIG Studio / Partner deck 2026</span></div>
     <img class="px" src="pixels-corner.svg" alt="">
-    <div class="body" style="gap:calc(32 * var(--px))">
+    <div class="body" style="gap:calc(48 * var(--px))">
       <p class="eyebrow">Proven track record</p>
-      <h2>Full rooms, real projects, and a studio behind them</h2>
-      <div class="g4" style="gap:calc(48 * var(--px))">
-        <div class="stat"><p class="num md">1,400<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>RSVPs</b><p class="sm quiet">Two events, four weeks apart</p></div>
-        <div class="stat"><p class="num md">250<span style="font-size:.5em;vertical-align:top;line-height:1.4">+</span></p><b>People in the room</b><p class="sm quiet">Builders to investors</p></div>
-        <div class="stat"><p class="num md">25</p><b>Projects built in a day</b><p class="sm quiet">At The Executable World</p></div>
-        <div class="stat"><p class="num md">10</p><b>Portfolio companies</b><p class="sm quiet">In the venture studio</p></div>
-      </div>
-      <div class="g3" style="margin-top:auto;gap:calc(32 * var(--px))">
-        <div class="event"><img class="photo" src="../events/executable-world-2026/img/hero.jpg" alt="Builders watching a live demo at The Executable World"><p class="label">September 19, 2026</p><h3>The Executable World</h3><p class="sm quiet">Full-stack AI hackathon. 408 RSVPs, about 100 builders, 25 projects. Co-hosts and judges from AgentX, VeloDB, NVIDIA and 500 Global.</p></div>
-        <div class="event"><img class="photo" src="../events/physical-ai-2026/img/audience.jpg" alt="Standing-room crowd at Frontier in Action"><p class="label">October 10, 2026, SF Tech Week</p><h3>Frontier in Action: Physical AI</h3><p class="sm quiet">About 1,000 RSVPs for a room built for 130. Five startup demos and an investor and research panel.</p></div>
-        <div class="event"><img class="photo" src="../events/ai-design-makeathon/img/poster.jpg" alt="AI Design Makeathon 2026 poster" style="object-position:50% 30%"><p class="label" style="color:var(--blue)">Next: November 7 to 14, 2026</p><h3>AI Design Makeathon</h3><p class="sm quiet">Three days online, then a Winner Demo in San Francisco. Co-hosted with Lovable, judges from Microsoft, OpenAI and Amazon.</p></div>
+      <h2>Two full rooms, four weeks apart</h2>
+      <div class="g2" style="margin-top:auto;gap:calc(80 * var(--px))">
+        <div class="big-event">
+          <img class="photo" src="../events/executable-world-2026/img/hero.jpg" alt="Builders watching a live demo at The Executable World">
+          <p class="label">September 19, 2026 · San Francisco</p>
+          <h3>The Executable World</h3>
+          <div class="row" style="gap:calc(56 * var(--px))">
+            <div class="stat"><p class="num md">408</p><b>RSVPs</b></div>
+            <div class="stat"><p class="num md">~100</p><b>Builders</b></div>
+            <div class="stat"><p class="num md">25</p><b>Projects</b></div>
+          </div>
+        </div>
+        <div class="big-event">
+          <img class="photo" src="../events/physical-ai-2026/img/audience.jpg" alt="Standing-room crowd at Frontier in Action">
+          <p class="label">October 10, 2026 · SF Tech Week</p>
+          <h3>Frontier in Action: Physical AI</h3>
+          <div class="row" style="gap:calc(56 * var(--px))">
+            <div class="stat"><p class="num md">~1,000</p><b>RSVPs</b></div>
+            <div class="stat"><p class="num md">150+</p><b>In the room</b></div>
+            <div class="stat"><p class="num md">5</p><b>Demos</b></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="foot"><span>RSVPs are sign-ups, not attendance. Attendance figures are estimates.</span><span>03 / 06</span></div>
+    <div class="foot"><span>RSVPs are sign-ups, not attendance. Attendance is estimated.</span><span>03 / 06</span></div>
   </div>
 </section>
 
