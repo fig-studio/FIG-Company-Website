@@ -28,6 +28,15 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/assets/events.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ]
 }

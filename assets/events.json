@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Fig AI Design Student Makeathon 2026",
+    "when": "November 7–9, 2026",
+    "short": "Nov 7–9",
+    "where": "Online",
+    "ends": "2026-11-09",
+    "blurb": "Three days for design students to turn AI problems into working prototypes.",
+    "href": "https://events.figstudio.vc/e/fig-ai-design-makeathon-2026",
+    "img": "/events/ai-design-makeathon/img/poster.jpg?v=20261024",
+    "imgAlt": "Poster for the AI Design Makeathon: online November 7 to 9, on-site award and winner demo at Third Coast Foundry, San Francisco, on November 14"
+  },
+  {
+    "title": "Frontier in Action: Physical Intelligence",
+    "when": "October 10, 2026",
+    "short": "Oct 10",
+    "where": "San Francisco",
+    "ends": "2026-10-10",
+    "blurb": "Physical AI demos and an investor and research panel at SF Tech Week.",
+    "href": "/events/physical-ai-2026",
+    "img": "/events/physical-ai-2026/img/poster.jpg",
+    "imgAlt": "Poster for Frontier in Action: Physical AI, SF Tech Week demo day, October 10"
+  },
+  {
+    "title": "The Executable World",
+    "when": "September 19, 2026",
+    "short": "Sep 19",
+    "where": "Full Stack AI Hackathon",
+    "ends": "2026-09-19",
+    "blurb": "A day of building, technical exchange and live demos.",
+    "href": "/events/executable-world-2026",
+    "img": "/events/executable-world-2026/img/poster.jpg",
+    "imgAlt": "Poster for The Executable World: Full Stack AI Hackathon & Mixer, September 19"
+  }
+]
