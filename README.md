@@ -11,13 +11,14 @@ Fonts (Sora / Inter) load from Google Fonts. Deploys as-is on Vercel.
 
 ## Unlinked event pages
 
-Four stand-alone pages are live but deliberately not linked from anywhere on the site, and are marked `noindex`
+Five stand-alone pages are live but deliberately not linked from anywhere on the site, and are marked `noindex`
 (meta tag plus an `X-Robots-Tag` header in `vercel.json`):
 
 - `/events/ai-design-makeathon-sponsorship` (sponsor packages, prices hidden)
 - `/events/ai-design-makeathon-sponsor-packages` (sponsor packages with prices; share only with sponsors you are negotiating with)
 - `/events/ai-design-makeathon-university` (university partnership)
 - `/events/ai-design-makeathon-partnership` (industry partnership, no pricing)
+- `/events/ai-design-makeathon-cover-brief` (cover brief for Design Meetup: event facts, logos, colours, downloads; its files are in `events/ai-design-makeathon-cover-brief/`)
 
 They share `events/ai-design-makeathon/` (theme, `page.css`, `page.js`, images). The prior-event figures on these pages
 are read from the recap page at load time, with static fallbacks in the markup.
